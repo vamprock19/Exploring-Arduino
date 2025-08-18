@@ -1,39 +1,35 @@
 const int LED        = 9;
 const int button     = 2;
 
-bool lastButton    = LOW;
-bool currentButton = LOW;
-bool ledOn =         false;
+int buttonReleased=   -1;
+long oldDelay =        0;
+bool ledOn =          false;
 
 void setup() 
 {
   pinMode(LED, OUTPUT);
-  pinMode(button, INPUT);
-
-
+  pinMode(button, INPUT_PULLUP);
+  Serial.begin(9600);
+  digitalWrite(LED, LOW);
 }
-
- bool debounce(bool last)
-  {
-    boolean current = digitalRead(button); // reads 2. Reads the button state
-    if(last != current)                    // if it's different 
-    {
-      delay(5);                           // wait 5 mm's
-      current = digitalRead(button);      // current = 2
-    }
-    return current; // it reads 2
-  }
 
 void loop()
 {
-  
-  currentButton = debounce(lastButton);
-  if(lastButton == LOW && currentButton == HIGH)
-  {
-    ledOn = !ledOn;
-  }
-  lastButton = currentButton;
-  digitalWrite(LED, ledOn);
-  
-
+    int buttonPressed = digitalRead(button);
+    long delayInMillis = millis();
+   
+    if(buttonPressed != buttonReleased && delayInMillis - oldDelay > 50) // true. overflow
+    {
+      oldDelay = delayInMillis;
+      buttonReleased = buttonPressed; // 0
+      
+      if(buttonPressed == HIGH)
+      {
+        Serial.println("Button Pressed");
+        ledOn = !ledOn; // it changes true / false depending its previous value
+        Serial.println(ledOn);
+      }
+      buttonReleased = buttonPressed;
+      digitalWrite(LED, ledOn);
+    }
 }
