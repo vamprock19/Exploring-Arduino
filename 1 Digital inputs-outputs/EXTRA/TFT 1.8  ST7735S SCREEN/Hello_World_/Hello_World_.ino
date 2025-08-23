@@ -1,3 +1,17 @@
+  /*this is a test to the TFT ST7735S screen, 
+   * uploaded by Angel on August 2025
+   */
+  /* ----------------------------------------------------------------
+ * GRN -> GROUND
+ * VDC -> 5V
+ * SCL -> 13
+ * SDA -> 11
+ * RST -> 8
+ * DC  -> 9
+ * CS  -> 10
+ * BLK -> 5V
+ * 
+ */
   #include <Adafruit_GFX.h>    // Core graphics
   #include <Adafruit_ST7735.h> // ST7735 driver
   #include <SPI.h>
