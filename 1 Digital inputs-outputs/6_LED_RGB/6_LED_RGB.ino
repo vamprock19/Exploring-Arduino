@@ -1,15 +1,3 @@
-/*
- * GRN -> GROUND
- * VDC -> 5V
- * SCL -> 13
- * SDA -> 11
- * RST -> 8
- * DC  -> 9
- * CS  -> 10
- * BLK -> 5V
- * 
- */
-
 
 const int Blue        = 9;
 const int Green      = 10;
