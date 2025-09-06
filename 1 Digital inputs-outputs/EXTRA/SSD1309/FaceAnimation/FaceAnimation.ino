@@ -1,4 +1,16 @@
 
+/*
+ * CS   ->    D8
+ * DC   ->    D3
+ * RES  ->    D4
+ * SDA  ->    D7
+ * SCL  ->    D5
+ * VCC  ->    5V
+ * GND  ->    GND
+ * 
+ */
+
+
 #include <Arduino.h>
 #include <U8g2lib.h>
 
