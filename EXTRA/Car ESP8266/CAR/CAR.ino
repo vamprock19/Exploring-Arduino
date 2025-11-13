@@ -54,42 +54,42 @@ void loop()
 }
 void forward()
 {
-  digitalWrite(IN1, HIGH); // LEFT WHEEL 
-  digitalWrite(IN3, LOW);  // LEFT WHEEL BACKWARDS
-  digitalWrite(IN2, LOW); // RIGHT WHEEL BAKCWARDS
-  digitalWrite(IN4, HIGH); // RIGH HELL
+  analogWrite(IN1, HIGH); // LEFT WHEEL 
+  analogWrite(IN3, LOW);  // LEFT WHEEL BACKWARDS
+  analogWrite(IN2, LOW); // RIGHT WHEEL BAKCWARDS
+  analogWrite(IN4, HIGH); // RIGH HELL
 }
 void backwards()
 {
-  digitalWrite(IN1, LOW); // LEFT WHEEL 
-  digitalWrite(IN3, HIGH);  // LEFT WHEEL BACKWARDS
-  digitalWrite(IN2, HIGH); // RIGHT WHEEL BAKCWARDS
-  digitalWrite(IN4, LOW); // RIGH HELL
+  analogWrite(IN1, LOW); // LEFT WHEEL 
+  analogWrite(IN3, 180);  // LEFT WHEEL BACKWARDS
+  analogWrite(IN2, 180); // RIGHT WHEEL BAKCWARDS
+  analogWrite(IN4, LOW); // RIGH HELL
  
   
 }
 void left()
 {
-  digitalWrite(IN1, LOW); // LEFT WHEEL 
-  digitalWrite(IN3, LOW);  // LEFT WHEEL BACKWARDS
-  digitalWrite(IN2, LOW); // RIGHT WHEEL BAKCWARDS
-  digitalWrite(IN4, HIGH); // RIGH HELL
+  analogWrite(IN1, LOW); // LEFT WHEEL 
+  analogWrite(IN3, LOW);  // LEFT WHEEL BACKWARDS
+  analogWrite(IN2, LOW); // RIGHT WHEEL BAKCWARDS
+  analogWrite(IN4, HIGH); // RIGH HELL
 }
 
 void right()
 {
-  digitalWrite(IN1, HIGH); // LEFT WHEEL 
-  digitalWrite(IN3, LOW);  // LEFT WHEEL BACKWARDS
-  digitalWrite(IN2, LOW); // RIGHT WHEEL BAKCWARDS
-  digitalWrite(IN4, LOW); // RIGH HELL
+  analogWrite(IN1, HIGH); // LEFT WHEEL 
+  analogWrite(IN3, LOW);  // LEFT WHEEL BACKWARDS
+  analogWrite(IN2, LOW); // RIGHT WHEEL BAKCWARDS
+  analogWrite(IN4, 26); // RIGH HELL
 }
 
 void rcStop()
 {
-  digitalWrite(IN1, LOW); // LEFT WHEEL 
-  digitalWrite(IN3, LOW);  // LEFT WHEEL BACKWARDS
-  digitalWrite(IN2, LOW); // RIGHT WHEEL BAKCWARDS
-  digitalWrite(IN4, LOW); // RIGH HELL
+  analogWrite(IN1, LOW); // LEFT WHEEL 
+  analogWrite(IN3, LOW);  // LEFT WHEEL BACKWARDS
+  analogWrite(IN2, LOW); // RIGHT WHEEL BAKCWARDS
+  analogWrite(IN4, LOW); // RIGH HELL
 }
 
 
