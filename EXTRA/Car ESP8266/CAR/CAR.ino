@@ -14,6 +14,8 @@ void setup()
   pinMode(IN2,OUTPUT);
   pinMode(IN3,OUTPUT);
   pinMode(IN4,OUTPUT);
+
+  j
  
   BT.begin(9600);
   Serial.begin(9600);
